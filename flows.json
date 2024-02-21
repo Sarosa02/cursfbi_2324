@@ -8,23 +8,7 @@
         "env": []
     },
     {
-        "id": "497faf91ed1a296a",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "83fb311e943a7313",
-        "type": "tab",
-        "label": "Flow 3",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "1dfebb9e21194fa7",
         "type": "tab",
         "label": "Flow 2",
         "disabled": true,
@@ -34,8 +18,48 @@
     {
         "id": "adbf4bc20e6d81cb",
         "type": "tab",
+        "label": "Flow 3",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1ff662ff575a734b",
+        "type": "tab",
         "label": "Flow 4",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3cff6cd770628121",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "78ba5230b9d23cdf",
+        "type": "tab",
+        "label": "Flow 6",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ab5148f07accc343",
+        "type": "tab",
+        "label": "Proyecto",
         "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cf52b6ff1f1be25d",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -266,6 +290,42 @@
         "db": "dbusuari12",
         "tz": "",
         "charset": "UTF8"
+    },
+    {
+        "id": "b93cb6fe8db0c8c8",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.8.124:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": false,
+        "login": true,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "f8fcc5613209232f",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.8.122:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": false,
+        "login": true,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "fc3fdc63040c8c23",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.8.124:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
     },
     {
         "id": "5772d1d5b491e88d",
@@ -513,300 +573,6 @@
                 "d2e122e2cf076d74"
             ],
             []
-        ]
-    },
-    {
-        "id": "e0e1ba3730a895eb",
-        "type": "inject",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "25",
-        "payloadType": "num",
-        "x": 110,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bfc7ce5919d52349",
-        "type": "switch",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "24",
-                "vt": "num"
-            },
-            {
-                "t": "lte",
-                "v": "24",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 230,
-        "y": 180,
-        "wires": [
-            [
-                "d326289871f44b56"
-            ],
-            [
-                "68bb4add92f52a95"
-            ]
-        ]
-    },
-    {
-        "id": "d326289871f44b56",
-        "type": "change",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "temperatura",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "1",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 140,
-        "wires": [
-            [
-                "cdd6dffa332128f8"
-            ]
-        ]
-    },
-    {
-        "id": "68bb4add92f52a95",
-        "type": "change",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "temperatura",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "0",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 220,
-        "wires": [
-            [
-                "cdd6dffa332128f8"
-            ]
-        ]
-    },
-    {
-        "id": "cdd6dffa332128f8",
-        "type": "rbe",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 570,
-        "y": 180,
-        "wires": [
-            [
-                "e597302b2572ca2e"
-            ]
-        ]
-    },
-    {
-        "id": "e597302b2572ca2e",
-        "type": "switch",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "neq",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 350,
-        "y": 380,
-        "wires": [
-            [
-                "f1bfd5445855900b"
-            ],
-            [
-                "e755b2ef40983725"
-            ]
-        ]
-    },
-    {
-        "id": "f1469cb2c692e370",
-        "type": "debug",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "d3ae27d63a8a3b74",
-        "type": "ui_button",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "button",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 90,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "db6591a4af2ffc72",
-        "type": "mqtt in",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "topic": "cefi/ejercicio1/fab1/temp6",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "489a868ab000e3d9",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 150,
-        "y": 120,
-        "wires": [
-            [
-                "bfc7ce5919d52349",
-                "623b6adcc7f6bdad"
-            ]
-        ]
-    },
-    {
-        "id": "623b6adcc7f6bdad",
-        "type": "debug",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "f1bfd5445855900b",
-        "type": "function",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "func": "msg.payload=\"ALARMA!!! \" + flow.get('temperatura');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 360,
-        "wires": [
-            [
-                "f1469cb2c692e370"
-            ]
-        ]
-    },
-    {
-        "id": "e755b2ef40983725",
-        "type": "function",
-        "z": "497faf91ed1a296a",
-        "name": "",
-        "func": "msg.payload=\"TODO OK\" + flow.get('temperatura');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 440,
-        "wires": [
-            [
-                "f1469cb2c692e370"
-            ]
         ]
     },
     {
@@ -1442,89 +1208,6 @@
         ]
     },
     {
-        "id": "c3da89fd21cb4e3d",
-        "type": "mysql",
-        "z": "1dfebb9e21194fa7",
-        "mydb": "7766441ea709e2e4",
-        "name": "",
-        "x": 640,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0e4c20d7f89fe825",
-        "type": "mqtt in",
-        "z": "1dfebb9e21194fa7",
-        "name": "",
-        "topic": "cefi/fabrica/panel4/temp1/Sara",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "6757e48c86675973",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 200,
-        "y": 120,
-        "wires": [
-            [
-                "f72d46ac481c7ee8"
-            ]
-        ]
-    },
-    {
-        "id": "f72d46ac481c7ee8",
-        "type": "function",
-        "z": "1dfebb9e21194fa7",
-        "name": "function 10",
-        "func": "var temp = msg.payload;\n\nmsg.topic = \"INSERT INTO `Temperaturas`(`temperatura`) VALUES (\"+ temp +\")\";\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 120,
-        "wires": [
-            [
-                "c3da89fd21cb4e3d",
-                "49e21115e0e808aa",
-                "bbe56321cd4a7f34"
-            ]
-        ]
-    },
-    {
-        "id": "49e21115e0e808aa",
-        "type": "debug",
-        "z": "1dfebb9e21194fa7",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "bbe56321cd4a7f34",
-        "type": "mysql",
-        "z": "1dfebb9e21194fa7",
-        "mydb": "745303e5ee3b48b3",
-        "name": "",
-        "x": 650,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "c01dbf867d870163",
         "type": "mysql",
         "z": "adbf4bc20e6d81cb",
@@ -1776,7 +1459,7 @@
         "type": "function",
         "z": "adbf4bc20e6d81cb",
         "name": "function 14",
-        "func": "var temp = msg.payload;\n\nvar Alarm = flow.get(\"NumAlarma\");\n\nAlarm += 1;\n\nflow.set(\"NumAlarma\", Alarm);\n\nmsg.topic = \"INSERT INTO `Temperaturas`(`temperatura`, `Alarmas`,`NumAlarm`) VALUES (\" + temp + \" , 0, \" + Alarm +\")\";\n\nreturn msg;",
+        "func": "var temp = msg.payload;\nvar Alarm = flow.get(\"NumAlarma\");\n\nflow.set(\"NumAlarma\", Alarm);\n\nmsg.topic = \"INSERT INTO `Temperaturas`(`temperatura`, `Alarmas`,`NumAlarm`) VALUES (\" + temp + \" , 0, \" + Alarm +\")\";\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1878,6 +1561,2564 @@
         "reg": false,
         "x": 320,
         "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15bd1167f5d0f296",
+        "type": "inject",
+        "z": "1ff662ff575a734b",
+        "name": "on",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "1bf2df3cceba768f",
+                "b871edca561719f5",
+                "440ba9fae07c4904",
+                "f4c1f0243c94a46b"
+            ]
+        ]
+    },
+    {
+        "id": "1bf2df3cceba768f",
+        "type": "OpcUa-Item",
+        "z": "1ff662ff575a734b",
+        "item": "ns=2;s=Application.GVL.Datos_OPC_1",
+        "datatype": "Int16",
+        "value": "",
+        "name": "",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "4e9b373fbe41d28b",
+                "a9871a9733c730ed"
+            ]
+        ]
+    },
+    {
+        "id": "b871edca561719f5",
+        "type": "OpcUa-Item",
+        "z": "1ff662ff575a734b",
+        "item": "‘ns=2;s=Application.GVL.Datos_OPC_2",
+        "datatype": "Int32",
+        "value": "",
+        "name": "",
+        "x": 380,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e9b373fbe41d28b",
+        "type": "OpcUa-Client",
+        "z": "1ff662ff575a734b",
+        "endpoint": "b93cb6fe8db0c8c8",
+        "action": "subscribe",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "6",
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 620,
+        "y": 120,
+        "wires": [
+            [
+                "48d6ee4e6a36579d"
+            ],
+            [
+                "9c563b9bb740bfed"
+            ]
+        ]
+    },
+    {
+        "id": "48d6ee4e6a36579d",
+        "type": "debug",
+        "z": "1ff662ff575a734b",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "440ba9fae07c4904",
+        "type": "OpcUa-Item",
+        "z": "1ff662ff575a734b",
+        "item": "‘ns=2;s=Application.GVL.Datos_OPC_3",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4c1f0243c94a46b",
+        "type": "OpcUa-Item",
+        "z": "1ff662ff575a734b",
+        "item": "‘ns=2;s=Application.GVL.Datos_OPC_4",
+        "datatype": "Float",
+        "value": "",
+        "name": "",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9871a9733c730ed",
+        "type": "change",
+        "z": "1ff662ff575a734b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "variable_topic1",
+                "pt": "flow",
+                "to": "ns=2;s=Application.GVL.Datos_OPC_1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c563b9bb740bfed",
+        "type": "function",
+        "z": "1ff662ff575a734b",
+        "name": "function 16",
+        "func": "var topic1 = flow.get('variable_topic1');\n\nif (topic1 == \"ns=2;s=Application.GVL.Datos_OPC_1\"){\n    flow.set('flowvariable_Datos_OPC_1', parseInt(msg.payload,10));\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3475551ef94dbb62",
+        "type": "OPCUA-IIoT-Flex-Server",
+        "z": "1ff662ff575a734b",
+        "port": "55380",
+        "endpoint": "UA/NodeRedFlexIIoTServer",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "",
+        "maxConnectionsPerEndpoint": "",
+        "maxAllowedSubscriptionNumber": "",
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsets": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": 1,
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerBrowse": 2000,
+        "delayToClose": 1000,
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n  // server = the created node-opcua server\n  // addressSpace = script placeholder\n  // eventObjects = to hold event variables in memory from this script\n  // internal global sandbox objects are\n  // node = node of the flex server,\n  // coreServer = core iiot server object for debug and access to nodeOPCUA,\n  // and scriptObjects to hold variables and functions\n  //const opcua =coreServer.core.nodeOPCUA;\n  //const LocalizedText = coreServer.core.nodeOPCUA.LocalizedText;\n  const LocalizedText = opcua.LocalizedText;\n  const namespace = addressSpace.getOwnNamespace();\n  coreServer.internalDebugLog('init dynamic address space');\n  node.warn('construct new address space for OPC UA');\n  var flexServerInternals = this;\n  //################## INICIALIZACIONES ##########################\n  //Inicialización de las variables de temperatura\n  this.sandboxFlowContext.set(\"flowvariable_Datos_OPC_1\", 0);\n  \n  \n\n  coreServer.internalDebugLog(\"Setup dinamic del espai de adreces\");\n\n  const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n  node.warn('Construccio del nou espai de adreces per a OPC UA');\n  const ProjecteFI = namespace.addFolder(rootFolder.objects, { \"browseName\": \"ProjecteFI\" });\n  const ProjecteFI1 = namespace.addFolder(ProjecteFI, { \"browseName\": \"ProjecteFI1\" });\n  //Declaración del espacio de direcciones\n  //espacio de direcciones Temperaturas\n\n  const device = namespace.addObject({\n    organizedBy: ProjecteFI1,\n    browseName: \"Mi_PANEL\",\n  });\n\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'variable_Datos_OPC_1',\n    nodeId: 's=Mi_PANEL.variable_Datos_OPC_1',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariable_Datos_OPC_1\")\n        });\n      }\n    }\n  });\n  \n\n  coreServer.internalDebugLog(\"Espai de adreces creat\");\n  node.warn(\"Contruccio del nou espai de adreces fet\");\n  done();\n}",
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "7691257647a23ba1"
+            ]
+        ]
+    },
+    {
+        "id": "7691257647a23ba1",
+        "type": "debug",
+        "z": "1ff662ff575a734b",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "10dff7340563f212",
+        "type": "change",
+        "z": "3cff6cd770628121",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowtemperatura1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4d773065aae7294",
+        "type": "OPCUA-IIoT-Flex-Server",
+        "z": "3cff6cd770628121",
+        "port": "55380",
+        "endpoint": "UA/NodeRedFlexIIoTServer",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "",
+        "maxConnectionsPerEndpoint": "",
+        "maxAllowedSubscriptionNumber": "",
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsets": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": 1,
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerBrowse": 2000,
+        "delayToClose": 1000,
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n  // server = the created node-opcua server\n  // addressSpace = script placeholder\n  // eventObjects = to hold event variables in memory from this script\n  // internal global sandbox objects are\n  // node = node of the flex server,\n  // coreServer = core iiot server object for debug and access to nodeOPCUA,\n  // and scriptObjects to hold variables and functions\n  //const opcua =coreServer.core.nodeOPCUA;\n  //const LocalizedText = coreServer.core.nodeOPCUA.LocalizedText;\n  const LocalizedText = opcua.LocalizedText;\n  const namespace = addressSpace.getOwnNamespace();\n  coreServer.internalDebugLog('init dynamic address space');\n  node.warn('construct new address space for OPC UA');\n  var flexServerInternals = this;\n  //################## INICIALIZACIONES ##########################\n  //Inicialización de las variables de temperatura\n  this.sandboxFlowContext.set(\"flowtemperatura1\", 10.9);\n  this.sandboxFlowContext.set(\"flowtemperatura2\", 10);\n  this.sandboxFlowContext.set(\"flowAlarma\", false);\n\n  coreServer.internalDebugLog(\"Setup dinamic del espai de adreces\");\n\n  const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n  node.warn('Construccio del nou espai de adreces per a OPC UA');\n  const ProjecteFI = namespace.addFolder(rootFolder.objects, { \"browseName\": \"ProjecteFI\" });\n  const ProjecteFI1 = namespace.addFolder(ProjecteFI, { \"browseName\": \"ProjecteFI1\" });\n  //Declaración del espacio de direcciones\n  //espacio de direcciones Temperaturas\n\n  const device = namespace.addObject({\n    organizedBy: ProjecteFI1,\n    browseName: \"Mi_PANEL\",\n  });\n  namespace.addVariable({\n    dataType: 'Float',\n    componentOf: device,\n    browseName: 'Temperatura1',\n    nodeId: 's=Mi_PANEL.Temperatura1',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Float,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowtemperatura1\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'Temperatura2',\n    nodeId: 's=Mi_PANEL.Temperatura2',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowtemperatura2\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Boolean',\n    componentOf: device,\n    browseName: 'Alarma',\n    nodeId: 's=Mi_PANEL.Alarma',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Boolean,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowAlarma\")\n        });\n      }\n    }\n  });\n\n  coreServer.internalDebugLog(\"Espai de adreces creat\");\n  node.warn(\"Contruccio del nou espai de adreces fet\");\n  done();\n}",
+        "x": 110,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9af69612818ab628",
+        "type": "mqtt in",
+        "z": "3cff6cd770628121",
+        "name": "",
+        "topic": "cefi/fabrica/panel4/temp1/Sara",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6757e48c86675973",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "10dff7340563f212",
+                "7008fa8fc8c64293"
+            ]
+        ]
+    },
+    {
+        "id": "2381e9b769eeacfc",
+        "type": "change",
+        "z": "3cff6cd770628121",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowtemperatura2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84293585aedac060",
+        "type": "inject",
+        "z": "3cff6cd770628121",
+        "name": "temp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 90,
+        "y": 400,
+        "wires": [
+            [
+                "2381e9b769eeacfc"
+            ]
+        ]
+    },
+    {
+        "id": "7008fa8fc8c64293",
+        "type": "switch",
+        "z": "3cff6cd770628121",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "20.99",
+                "vt": "str"
+            },
+            {
+                "t": "btwn",
+                "v": "20",
+                "vt": "num",
+                "v2": "29.99",
+                "v2t": "num"
+            },
+            {
+                "t": "gte",
+                "v": "30",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "3c0c58e208c8b9da"
+            ],
+            [
+                "c315fe44a032e558"
+            ],
+            [
+                "0f21dcdeed575fde"
+            ]
+        ]
+    },
+    {
+        "id": "3c0c58e208c8b9da",
+        "type": "change",
+        "z": "3cff6cd770628121",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowAlarma",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c315fe44a032e558",
+        "type": "change",
+        "z": "3cff6cd770628121",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowAlarma",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f21dcdeed575fde",
+        "type": "change",
+        "z": "3cff6cd770628121",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowAlarma",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b62c4f3bcfd26c56",
+        "type": "change",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowtemperatura1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f0d5666b203e36b",
+        "type": "OPCUA-IIoT-Flex-Server",
+        "z": "78ba5230b9d23cdf",
+        "port": "55380",
+        "endpoint": "UA/NodeRedFlexIIoTServer",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "",
+        "maxConnectionsPerEndpoint": "",
+        "maxAllowedSubscriptionNumber": "",
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsets": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": 1,
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerBrowse": 2000,
+        "delayToClose": 1000,
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n  // server = the created node-opcua server\n  // addressSpace = script placeholder\n  // eventObjects = to hold event variables in memory from this script\n  // internal global sandbox objects are\n  // node = node of the flex server,\n  // coreServer = core iiot server object for debug and access to nodeOPCUA,\n  // and scriptObjects to hold variables and functions\n  //const opcua =coreServer.core.nodeOPCUA;\n  //const LocalizedText = coreServer.core.nodeOPCUA.LocalizedText;\n  const LocalizedText = opcua.LocalizedText;\n  const namespace = addressSpace.getOwnNamespace();\n  coreServer.internalDebugLog('init dynamic address space');\n  node.warn('construct new address space for OPC UA');\n  var flexServerInternals = this;\n  //################## INICIALIZACIONES ##########################\n  //Inicialización de las variables de temperatura\n  this.sandboxFlowContext.set(\"flowtemperatura1\", 10.9);\n  this.sandboxFlowContext.set(\"flowAlarma\", false);\n  this.sandboxFlowContext.set(\"flowvariable_Datos_OPC_1\", 0);\n  \n  \n\n  coreServer.internalDebugLog(\"Setup dinamic del espai de adreces\");\n\n  const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n  node.warn('Construccio del nou espai de adreces per a OPC UA');\n  const ProjecteFI = namespace.addFolder(rootFolder.objects, { \"browseName\": \"ProjecteFI\" });\n  const ProjecteFI1 = namespace.addFolder(ProjecteFI, { \"browseName\": \"ProjecteFI1\" });\n  //Declaración del espacio de direcciones\n  //espacio de direcciones Temperaturas\n\n  const device = namespace.addObject({\n    organizedBy: ProjecteFI1,\n    browseName: \"Mi_PANEL\",\n  });\n  namespace.addVariable({\n    dataType: 'Float',\n    componentOf: device,\n    browseName: 'Temperatura1',\n    nodeId: 's=Mi_PANEL.Temperatura1',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Float,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowtemperatura1\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Boolean',\n    componentOf: device,\n    browseName: 'Alarma',\n    nodeId: 's=Mi_PANEL.Alarma',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Boolean,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowAlarma\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'variable_Datos_OPC_1',\n    nodeId: 's=Mi_PANEL.variable_Datos_OPC_1',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariable_Datos_OPC_1\")\n        });\n      }\n    }\n  });\n  \n\n  coreServer.internalDebugLog(\"Espai de adreces creat\");\n  node.warn(\"Contruccio del nou espai de adreces fet\");\n  done();\n}",
+        "x": 630,
+        "y": 540,
+        "wires": [
+            [
+                "3f62c5cefbd288c3"
+            ]
+        ]
+    },
+    {
+        "id": "8d1186a914642bf2",
+        "type": "mqtt in",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "topic": "cefi/fabrica/panel4/temp1/Sara",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6757e48c86675973",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "b62c4f3bcfd26c56",
+                "68886330c5771d56"
+            ]
+        ]
+    },
+    {
+        "id": "68886330c5771d56",
+        "type": "switch",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "20.99",
+                "vt": "str"
+            },
+            {
+                "t": "btwn",
+                "v": "20",
+                "vt": "num",
+                "v2": "29.99",
+                "v2t": "num"
+            },
+            {
+                "t": "gte",
+                "v": "30",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "ad34bab0dabeb5a7"
+            ],
+            [
+                "e6f98db0cec6aa5a"
+            ],
+            [
+                "bb467b9df3dd764c"
+            ]
+        ]
+    },
+    {
+        "id": "e6f98db0cec6aa5a",
+        "type": "change",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowAlarma",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb467b9df3dd764c",
+        "type": "change",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowAlarma",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5f4ad06d7bf6816",
+        "type": "OpcUa-Item",
+        "z": "78ba5230b9d23cdf",
+        "item": "‘ns=2;s=Application.GVL.Datos_OPC_2",
+        "datatype": "Int32",
+        "value": "",
+        "name": "",
+        "x": 140,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "87a2b301da2f8f2b",
+        "type": "OpcUa-Item",
+        "z": "78ba5230b9d23cdf",
+        "item": "‘ns=2;s=Application.GVL.Datos_OPC_3",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 140,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "049ea67c9c912cbe",
+        "type": "OpcUa-Item",
+        "z": "78ba5230b9d23cdf",
+        "item": "‘ns=2;s=Application.GVL.Datos_OPC_4",
+        "datatype": "Float",
+        "value": "",
+        "name": "",
+        "x": 140,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5abbf1950b2fffd8",
+        "type": "OpcUa-Client",
+        "z": "78ba5230b9d23cdf",
+        "endpoint": "b93cb6fe8db0c8c8",
+        "action": "subscribe",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "6",
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 580,
+        "y": 400,
+        "wires": [
+            [
+                "f0cf5846da0cbc55"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f0cf5846da0cbc55",
+        "type": "function",
+        "z": "78ba5230b9d23cdf",
+        "name": "function 15",
+        "func": "var topic1 = flow.get('variable_topic1');\n\nif (topic1 == \"ns=2;s=Application.GVL.Datos_OPC_1\"){\n    flow.set('flowvariable_Datos_OPC_1', parseInt(msg.payload));\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 400,
+        "wires": [
+            [
+                "23264f5ecb45481e"
+            ]
+        ]
+    },
+    {
+        "id": "247dac0f0faba4a4",
+        "type": "inject",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Application.GVL.Datos_OPC_1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "41655e796813f835",
+                "5abbf1950b2fffd8"
+            ]
+        ]
+    },
+    {
+        "id": "ad34bab0dabeb5a7",
+        "type": "change",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowAlarma",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41655e796813f835",
+        "type": "change",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "variable_topic1",
+                "pt": "flow",
+                "to": "topic",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23264f5ecb45481e",
+        "type": "debug",
+        "z": "78ba5230b9d23cdf",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3f62c5cefbd288c3",
+        "type": "debug",
+        "z": "78ba5230b9d23cdf",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "3fa4621d2c6fc4e4",
+        "type": "inject",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Application.GVL.Datos_OPC_1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 460,
+        "wires": [
+            [
+                "1c6a90295fa3342e",
+                "5abbf1950b2fffd8"
+            ]
+        ]
+    },
+    {
+        "id": "1c6a90295fa3342e",
+        "type": "change",
+        "z": "78ba5230b9d23cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "variable_topic1",
+                "pt": "flow",
+                "to": "topic",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "378ae924c01f11bd",
+        "type": "change",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowtemperatura1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c65e673085728c4e",
+        "type": "OPCUA-IIoT-Flex-Server",
+        "z": "ab5148f07accc343",
+        "port": "55380",
+        "endpoint": "UA/NodeRedFlexIIoTServer",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "",
+        "maxConnectionsPerEndpoint": "",
+        "maxAllowedSubscriptionNumber": "",
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsets": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": 1,
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerBrowse": 2000,
+        "delayToClose": 1000,
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n  // server = the created node-opcua server\n  // addressSpace = script placeholder\n  // eventObjects = to hold event variables in memory from this script\n  // internal global sandbox objects are\n  // node = node of the flex server,\n  // coreServer = core iiot server object for debug and access to nodeOPCUA,\n  // and scriptObjects to hold variables and functions\n  //const opcua =coreServer.core.nodeOPCUA;\n  //const LocalizedText = coreServer.core.nodeOPCUA.LocalizedText;\n  const LocalizedText = opcua.LocalizedText;\n  const namespace = addressSpace.getOwnNamespace();\n  coreServer.internalDebugLog('init dynamic address space');\n  node.warn('construct new address space for OPC UA');\n  var flexServerInternals = this;\n  //################## INICIALIZACIONES ##########################\n  //Inicialización de las variables de temperatura\n  this.sandboxFlowContext.set(\"flowtemperatura1\", 10.9);\n  this.sandboxFlowContext.set(\"flowAlarma\", false);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo1\", false);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo2\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo3\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo4\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo5\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo6\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo7\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo8\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo9\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo10\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo11\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo12\", 0);\n  this.sandboxFlowContext.set(\"flowvariableStructVariadorCampo13\", false);\n\n\n  coreServer.internalDebugLog(\"Setup dinamic del espai de adreces\");\n\n  const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n  node.warn('Construccio del nou espai de adreces per a OPC UA');\n  const ProjecteFI = namespace.addFolder(rootFolder.objects, { \"browseName\": \"ProjecteFI\" });\n  const ProjecteFI1 = namespace.addFolder(ProjecteFI, { \"browseName\": \"ProjecteFI1\" });\n  //Declaración del espacio de direcciones\n  //espacio de direcciones Temperaturas\n\n  const device = namespace.addObject({\n    organizedBy: ProjecteFI1,\n    browseName: \"Mi_PANEL\",\n  });\n  namespace.addVariable({\n    dataType: 'Float',\n    componentOf: device,\n    browseName: 'Temperatura1',\n    nodeId: 's=Mi_PANEL.Temperatura1',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Float,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowtemperatura1\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Boolean',\n    componentOf: device,\n    browseName: 'Alarma',\n    nodeId: 's=Mi_PANEL.Alarma',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Boolean,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowAlarma\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Boolean',\n    componentOf: device,\n    browseName: 'Estado_Maquina',\n    nodeId: 's=Mi_PANEL.Estado_Maquina',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Boolean,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo1\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'Horas_Funcioando',\n    nodeId: 's=Mi_PANEL.Horas_Funcionando',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo2\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'Cinta1',\n    nodeId: 's=Mi_PANEL.Cinta1',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo3\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'Cinta2',\n    nodeId: 's=Mi_PANEL.Cinta2',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo4\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'Cinta3',\n    nodeId: 's=Mi_PANEL.Cinta3',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo5\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'Cinta4',\n    nodeId: 's=Mi_PANEL.Cinta4',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo6\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'Cinta5',\n    nodeId: 's=Mi_PANEL.Cinta5',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo7\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'Cilindro',\n    nodeId: 's=Mi_PANEL.Cilindro',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo8\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'PiezasA',\n    nodeId: 's=Mi_PANEL.PiezasA',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo9\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'PiezasB',\n    nodeId: 's=Mi_PANEL.PiezasB',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo10\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'PiezasD',\n    nodeId: 's=Mi_PANEL.PiezasD',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo11\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Int16',\n    componentOf: device,\n    browseName: 'Piezas_Totales',\n    nodeId: 's=Mi_PANEL.Piezas_Totales',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Int16,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo12\")\n        });\n      }\n    }\n  });\n\n  namespace.addVariable({\n    dataType: 'Boolean',\n    componentOf: device,\n    browseName: 'Paro_Emergencia',\n    nodeId: 's=Mi_PANEL.Paro_Emergencia',\n    value: {\n      get: function () {\n        return new opcua.Variant({\n          dataType: opcua.DataType.Boolean,\n          value: flexServerInternals.sandboxFlowContext.get(\"flowvariableStructVariadorCampo13\")\n        });\n      }\n    }\n  });\n\n  coreServer.internalDebugLog(\"Espai de adreces creat\");\n  node.warn(\"Contruccio del nou espai de adreces fet\");\n  done();\n}",
+        "x": 750,
+        "y": 480,
+        "wires": [
+            [
+                "6001435f34bbe80d"
+            ]
+        ]
+    },
+    {
+        "id": "d28af025133e73b5",
+        "type": "mqtt in",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "topic": "cefi/fabrica/panel4/temp1/Sara",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6757e48c86675973",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "378ae924c01f11bd",
+                "8e99753d4b50437c"
+            ]
+        ]
+    },
+    {
+        "id": "8e99753d4b50437c",
+        "type": "switch",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "20.99",
+                "vt": "str"
+            },
+            {
+                "t": "btwn",
+                "v": "20",
+                "vt": "num",
+                "v2": "29.99",
+                "v2t": "num"
+            },
+            {
+                "t": "gte",
+                "v": "30",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "de1abab875683b08"
+            ],
+            [
+                "4dac19d0144dd320"
+            ],
+            [
+                "0455cc92928e15e8"
+            ]
+        ]
+    },
+    {
+        "id": "4dac19d0144dd320",
+        "type": "change",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowAlarma",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0455cc92928e15e8",
+        "type": "change",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowAlarma",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c42a7f854ea7b2a4",
+        "type": "OpcUa-Client",
+        "z": "ab5148f07accc343",
+        "endpoint": "b93cb6fe8db0c8c8",
+        "action": "subscribe",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "6",
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "name": "",
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "d12c25703430beb0",
+                "3ed312d8060ac179"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d12c25703430beb0",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 17",
+        "func": "var topic = flow.get('variable_topic');\n\nif (topic == \"ns=2;s=Application.GVL.struct_Etado_maquina\") {\n\n    flow.set('flowvariableStructVariadorCampo1', parseInt(msg.payload.xEstado_De_Maquina)); \n    flow.set('flowvariableStructVariadorCampo2', parseInt(msg.payload.iHoras_Funcionando)); \n    flow.set('flowvariableStructVariadorCampo3', parseInt(msg.payload.iNum_cinta1)); \n    flow.set('flowvariableStructVariadorCampo4', parseInt(msg.payload.iNum_cinta2)); \n    flow.set('flowvariableStructVariadorCampo5', parseInt(msg.payload.iNum_cinta3)); \n    flow.set('flowvariableStructVariadorCampo6', parseInt(msg.payload.iNum_cinta4)); \n    flow.set('flowvariableStructVariadorCampo7', parseInt(msg.payload.iNum_cinta5)); \n    flow.set('flowvariableStructVariadorCampo8', parseInt(msg.payload.iNum_cilindro)); \n    flow.set('flowvariableStructVariadorCampo9', parseInt(msg.payload.iNum_cajas_A)); \n    flow.set('flowvariableStructVariadorCampo10', parseInt(msg.payload.iNum_cajas_B)); \n    flow.set('flowvariableStructVariadorCampo11', parseInt(msg.payload.iNum_cajas_D)); \n    flow.set('flowvariableStructVariadorCampo12', parseInt(msg.payload.iNum_cajas_Total)); \n}\nif (topic == \"ns=2;s=Application.GVL.Parada_emergencia\") {\n\n    flow.set('flowvariableStructVariadorCampo13', parseInt(msg.payload)); \n    \n}\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 340,
+        "wires": [
+            [
+                "3969111f4d7f03c1"
+            ]
+        ]
+    },
+    {
+        "id": "4ddfcbbf2fa463b0",
+        "type": "inject",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Application.GVL.struct_Etado_maquina",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "987d5114e959b759",
+                "c42a7f854ea7b2a4"
+            ]
+        ]
+    },
+    {
+        "id": "de1abab875683b08",
+        "type": "change",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowAlarma",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "987d5114e959b759",
+        "type": "change",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "variable_topic",
+                "pt": "flow",
+                "to": "topic",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3969111f4d7f03c1",
+        "type": "debug",
+        "z": "ab5148f07accc343",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6001435f34bbe80d",
+        "type": "debug",
+        "z": "ab5148f07accc343",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "3ed312d8060ac179",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 18",
+        "func": "var Temp = flow.get(\"flowtemperatura1\");\nflow.set(\"flowtemperatura1\", Temp);\n\nvar EstMaq = flow.get(\"flowvariableStructVariadorCampo1\");\nflow.set(\"flowvariableStructVariadorCampo1\", EstMaq);\n\nvar HoraFun = flow.get(\"flowvariableStructVariadorCampo2\");\nflow.set(\"flowvariableStructVariadorCampo2\", HoraFun);\n\nvar Cinta1 = flow.get(\"flowvariableStructVariadorCampo3\");\nflow.set(\"flowvariableStructVariadorCampo3\", Cinta1);\n\nvar Cinta2 = flow.get(\"flowvariableStructVariadorCampo4\");\nflow.set(\"flowvariableStructVariadorCampo4\", Cinta2);\n\nvar Cinta3 = flow.get(\"flowvariableStructVariadorCampo5\");\nflow.set(\"flowvariableStructVariadorCampo5\", Cinta3);\n\nvar Cinta4 = flow.get(\"flowvariableStructVariadorCampo6\");\nflow.set(\"flowvariableStructVariadorCampo6\", Cinta4);\n\nvar Cinta5 = flow.get(\"flowvariableStructVariadorCampo7\");\nflow.set(\"flowvariableStructVariadorCampo7\", Cinta5);\n\nvar Cilindro = flow.get(\"flowvariableStructVariadorCampo8\");\nflow.set(\"flowvariableStructVariadorCampo8\", Cilindro);\n\nvar ProductoA = flow.get(\"flowvariableStructVariadorCampo9\");\nflow.set(\"flowvariableStructVariadorCampo9\", ProductoA);\n\nvar ProductoB = flow.get(\"flowvariableStructVariadorCampo10\");\nflow.set(\"flowvariableStructVariadorCampo10\", ProductoB);\n\nvar ProductoD = flow.get(\"flowvariableStructVariadorCampo11\");\nflow.set(\"flowvariableStructVariadorCampo11\", ProductoD);\n\nvar ProducTotal = flow.get(\"flowvariableStructVariadorCampo12\");\nflow.set(\"flowvariableStructVariadorCampo12\", ProducTotal);\n\n\n\nmsg.topic = \"INSERT INTO `Proyecto_Datos`(`temperatura`, `Cinta1`, `Cinta2`, `Cinta3`, `Cinta4`, `Cinta5`, `Cilindro`, `ProductoA`, `ProductoB`, `ProductoD`, `Piezas_Totales`, `Horas_funcionamiento`, `Estado_Maquina`) VALUES (\" + Temp + \",\" + Cinta1 + \",\" + Cinta2 + \",\" + Cinta3 + \",\" + Cinta4 + \",\" + Cinta5 + \",\" + Cilindro + \",\" + ProductoA + \",\" + ProductoB + \",\" + ProductoD + \",\" + ProducTotal + \",\" + HoraFun + \",\" + EstMaq + \")\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a338caa778c4557",
+        "type": "telegram sender",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "bot": "29718e1acbbae656",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 560,
+        "wires": [
+            [
+                "8b0f07befcf90b77"
+            ]
+        ]
+    },
+    {
+        "id": "d8d54f2ed518c56f",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 19",
+        "func": "\nmsg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"La temperatura es:\" + \" \" + flow.get(\"flowtemperatura1\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 560,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "8b0f07befcf90b77",
+        "type": "debug",
+        "z": "ab5148f07accc343",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "45d6f28758042a16",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/temp",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 560,
+        "wires": [
+            [
+                "d8d54f2ed518c56f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "769f0304e0b9c4f5",
+        "type": "switch",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "t": "lte",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "29.99",
+                "vt": "num",
+                "v2": "21",
+                "v2t": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 450,
+        "y": 1380,
+        "wires": [
+            [
+                "2c4d8e29a020f327"
+            ],
+            [
+                "d9e0e1405ee606fe"
+            ],
+            [
+                "95937c5697b40785"
+            ]
+        ]
+    },
+    {
+        "id": "2c4d8e29a020f327",
+        "type": "change",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Calor",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 1320,
+        "wires": [
+            [
+                "adefb755852ba611"
+            ]
+        ]
+    },
+    {
+        "id": "d9e0e1405ee606fe",
+        "type": "change",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "frio",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 1380,
+        "wires": [
+            [
+                "02eaa228c6400762"
+            ]
+        ]
+    },
+    {
+        "id": "adefb755852ba611",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 20",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Alarma, Demasido calor\",\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1320,
+        "wires": [
+            [
+                "e11550770a1ba371"
+            ]
+        ]
+    },
+    {
+        "id": "02eaa228c6400762",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 21",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Alarma, Demasido Frio\",\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1380,
+        "wires": [
+            [
+                "e11550770a1ba371"
+            ]
+        ]
+    },
+    {
+        "id": "e11550770a1ba371",
+        "type": "rbe",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 470,
+        "y": 1500,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "95937c5697b40785",
+        "type": "change",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Normal",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 1440,
+        "wires": [
+            [
+                "b8f1a6d1cb4961f3"
+            ]
+        ]
+    },
+    {
+        "id": "b8f1a6d1cb4961f3",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 22",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"La temperatura ya es normal\",\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1440,
+        "wires": [
+            [
+                "e11550770a1ba371"
+            ]
+        ]
+    },
+    {
+        "id": "1a9d1db18dbd93d6",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/hora",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 620,
+        "wires": [
+            [
+                "c1df079538f4ffb4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c1df079538f4ffb4",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 23",
+        "func": "var d=new Date();\n\nvar hours=d.getHours() //the hour (0-23)\nvar minutes=d.getMinutes() //-the minute (0-59)\nvar seconds=d.getSeconds() //-the seconds (0-59)\n\nmsg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"La Hora es:\" + \" \" + hours + \":\" + minutes,\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 620,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "f2e1772f64484ad2",
+        "type": "mqtt in",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "topic": "cefi/fabrica/panel4/temp1/Sara",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6757e48c86675973",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1380,
+        "wires": [
+            [
+                "769f0304e0b9c4f5"
+            ]
+        ]
+    },
+    {
+        "id": "4e3c8243801ef0d3",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/horafun",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 120,
+        "y": 680,
+        "wires": [
+            [
+                "c8167931a802375b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c8167931a802375b",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 24",
+        "func": "\nmsg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las horas funcionadas son:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo2\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 680,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "6f7e1f75cf57ebae",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/cinta1",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 740,
+        "wires": [
+            [
+                "3fa795077bf0c9a7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3fa795077bf0c9a7",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 25",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las veces que la cinta 1 se encendio:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo3\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 740,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "62d4288d2f237f94",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/cinta2",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 800,
+        "wires": [
+            [
+                "a2338a8fcfd78660"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a2338a8fcfd78660",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 26",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las veces que la cinta 2 se encendio:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo4\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 800,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "d0bef877718607d6",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/cinta3",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 860,
+        "wires": [
+            [
+                "995b221b8f338d33"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "995b221b8f338d33",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 27",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las veces que la cinta 3 se encendio:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo5\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 860,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "6572582b0ef5153e",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/cinta4",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 920,
+        "wires": [
+            [
+                "9ae7e1125c04a088"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9ae7e1125c04a088",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 28",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las veces que la cinta 4 se encendio:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo6\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 920,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "9326d50b5f6b9966",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/cilindro",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 1040,
+        "wires": [
+            [
+                "79a2b8d7daedadb1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "79a2b8d7daedadb1",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 29",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las veces que el cilindro se encendio:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo8\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1040,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "46b92ec774049680",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/productoa",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 120,
+        "y": 1100,
+        "wires": [
+            [
+                "e8d198747760873f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e8d198747760873f",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 30",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las total de cajas del tipo A son:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo9\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1100,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "0ed0c20285600146",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/productob",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 120,
+        "y": 1160,
+        "wires": [
+            [
+                "4d44610888dcd70c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4d44610888dcd70c",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 31",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las total de cajas del tipo B son:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo10\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1160,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "93c87277fd960445",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/productod",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 120,
+        "y": 1220,
+        "wires": [
+            [
+                "206d0287ed558762"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "206d0287ed558762",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 32",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las total de cajas del tipo D son:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo11\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1220,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "22c705d83c04df8f",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/productototal",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 130,
+        "y": 1280,
+        "wires": [
+            [
+                "754fd89fc1631ba9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "754fd89fc1631ba9",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 33",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las total de cajas son:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo12\"),\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1280,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "5cff3aab729de55a",
+        "type": "mysql",
+        "z": "ab5148f07accc343",
+        "mydb": "745303e5ee3b48b3",
+        "name": "",
+        "x": 930,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "845bc0566a621fec",
+        "type": "telegram command",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "command": "/cinta5",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "29718e1acbbae656",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 110,
+        "y": 980,
+        "wires": [
+            [
+                "b2c322c3f8159b4e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b2c322c3f8159b4e",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 34",
+        "func": "msg.payload = {\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Las veces que la cinta 5 se encendio:\" + \" \" + flow.get(\"flowvariableStructVariadorCampo7\"),\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 980,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "9f7001637926fa40",
+        "type": "debug",
+        "z": "ab5148f07accc343",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "ca57e45f2395c024",
+        "type": "inject",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=2;s=Application.GVL.Parada_emergencia",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "987d5114e959b759"
+            ]
+        ]
+    },
+    {
+        "id": "ebfb2779e55b8dfb",
+        "type": "inject",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "payload",
+                "vt": "msg"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "flowvariableStructVariadorCampo13",
+        "payloadType": "flow",
+        "x": 220,
+        "y": 1560,
+        "wires": [
+            [
+                "9f7001637926fa40",
+                "ccf5d8cab4acc646"
+            ]
+        ]
+    },
+    {
+        "id": "83c098118b57332a",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 35",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Paro de emergencia desactivado\",\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1520,
+        "wires": [
+            [
+                "0e26041fee20f069"
+            ]
+        ]
+    },
+    {
+        "id": "0e26041fee20f069",
+        "type": "rbe",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 490,
+        "y": 1740,
+        "wires": [
+            [
+                "7a338caa778c4557"
+            ]
+        ]
+    },
+    {
+        "id": "4601e19608623855",
+        "type": "function",
+        "z": "ab5148f07accc343",
+        "name": "function 37",
+        "func": "msg.payload={\n    \"chatId\": 564715517,\n    \"type\": \"message\",\n    \"content\": \"Alarma, Paro de emergencia activado\",\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1600,
+        "wires": [
+            [
+                "0e26041fee20f069"
+            ]
+        ]
+    },
+    {
+        "id": "ccf5d8cab4acc646",
+        "type": "switch",
+        "z": "ab5148f07accc343",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 1560,
+        "wires": [
+            [
+                "83c098118b57332a"
+            ],
+            [
+                "4601e19608623855"
+            ]
+        ]
+    },
+    {
+        "id": "d2a0b1c7b5f4db97",
+        "type": "OpcUa-Client",
+        "z": "cf52b6ff1f1be25d",
+        "endpoint": "fc3fdc63040c8c23",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 400,
+        "y": 300,
+        "wires": [
+            [
+                "02f5e5f098cfcda3",
+                "dc05feee161e8645"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1203f1f0d726ef4f",
+        "type": "change",
+        "z": "cf52b6ff1f1be25d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "variableTopic",
+                "pt": "flow",
+                "to": "topic",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "24579184757f0d5f",
+        "type": "rbe",
+        "z": "cf52b6ff1f1be25d",
+        "name": "",
+        "func": "rbe",
+        "gap": "0",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 790,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "38c8f3abfd04ca7e",
+        "type": "comment",
+        "z": "cf52b6ff1f1be25d",
+        "name": "estructura variador",
+        "info": "",
+        "x": 130,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "33165f44bd319391",
+        "type": "comment",
+        "z": "cf52b6ff1f1be25d",
+        "name": "estructura servomotor",
+        "info": "",
+        "x": 120,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c9f6ed68ff87c6f5",
+        "type": "inject",
+        "z": "cf52b6ff1f1be25d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "ns=4;s=de121a141StructDatosServomotorIn;datatype=struct",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "1203f1f0d726ef4f",
+                "d2a0b1c7b5f4db97"
+            ]
+        ]
+    },
+    {
+        "id": "3100ab77a9552f1a",
+        "type": "debug",
+        "z": "cf52b6ff1f1be25d",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "02f5e5f098cfcda3",
+        "type": "debug",
+        "z": "cf52b6ff1f1be25d",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d10c4ce0b44571b1",
+        "type": "inject",
+        "z": "cf52b6ff1f1be25d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=4;s=de121a141StructDatosVariadorIn;datatype=struct",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "d2a0b1c7b5f4db97",
+                "1203f1f0d726ef4f"
+            ]
+        ]
+    },
+    {
+        "id": "dc05feee161e8645",
+        "type": "function",
+        "z": "cf52b6ff1f1be25d",
+        "name": "function 21",
+        "func": "var topic=flow.get('variableTopic');\n\n\n//DATOS VARIADOR ESTRUCTURA\n\nif (topic == \"ns=4;s=de121a141StructDatosVariadorIn;datatype=struct\"){\n    \n    flow.set('flowvariableStructVariadorCampo1', parseInt(msg.payload.horasParoRunParam1500, 10)); //int\n    flow.set('flowvariableStructVariadorCampo2', parseInt(msg.payload.horasFuncRunParam1501, 10)); //int\n    flow.set('flowvariableStructVariadorCampo3', parseInt(msg.payload.numArranquesParam1503, 10)); //int\n    flow.set('flowvariableStructVariadorCampo4', parseInt(msg.payload.referenciaPorcentajeParam1602, 10)); //int\n    flow.set('flowvariableStructVariadorCampo5', parseFloat(msg.payload.potenciakWParam1610)); //real\n    flow.set('flowvariableStructVariadorCampo6', parseInt(msg.payload.tensionMotorParam1612, 10)); //int\n    flow.set('flowvariableStructVariadorCampo7', parseInt(msg.payload.frecuenciaParam1613, 10)); //int\n    flow.set('flowvariableStructVariadorCampo8', parseFloat(msg.payload.intensidadMotorParam1614)); //real\n    flow.set('flowvariableStructVariadorCampo9', parseInt(msg.payload.frecuenciaPorcentajeParam1615, 10)); //int\n    flow.set('flowvariableStructVariadorCampo10', parseFloat(msg.payload.parNmParam1616)); //real\n    flow.set('flowvariableStructVariadorCampo11', parseInt(msg.payload.velocidadRPMParam1617, 10)); //int\n    }\n\n//DATOS SERVOMOTOR ESTRUCTURA\n\nelse if (topic == \"ns=4;s=de121a141StructDatosServomotorIn;datatype=struct\"){\n    flow.set('flowvariableStructServomotorCampo1', parseFloat(msg.payload.posicion)); //Lreal\n    flow.set('flowvariableStructServomotorCampo2', parseFloat(msg.payload.velocidad)); //Lreal\n    flow.set('flowvariableStructServomotorCampo3', parseFloat(msg.payload.par)); //Lreal\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "3100ab77a9552f1a",
+                "24579184757f0d5f"
+            ]
+        ]
+    },
+    {
+        "id": "bdd3ba73debddc64",
+        "type": "OPCUA-IIoT-Flex-Server",
+        "z": "cf52b6ff1f1be25d",
+        "port": "55380",
+        "endpoint": "UA/NodeRedFlexIIoTServer",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "",
+        "maxConnectionsPerEndpoint": "",
+        "maxAllowedSubscriptionNumber": "",
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsets": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": 1,
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerBrowse": 2000,
+        "delayToClose": 1000,
+        "addressSpaceScript": "//Creación de un servidor para leer y servir variables opcua y mqtt\n\nfunction constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n    // server = the created node-opcua server\n    // addressSpace = script placeholder\n    // eventObjects = to hold event variables in memory from this script\n\n    // internal global sandbox objects are \n    // node = node of the flex server, \n    // coreServer = core iiot server object for debug and access to nodeOPCUA,\n    // and scriptObjects to hold variables and functions\n    //const opcua =coreServer.core.nodeOPCUA;\n    //const LocalizedText = coreServer.core.nodeOPCUA.LocalizedText;\n    const LocalizedText = opcua.LocalizedText;\n    const namespace = addressSpace.getOwnNamespace();\n\n    coreServer.internalDebugLog('init dynamic address space');\n    node.warn('construct new address space for OPC UA');\n\n    var flexServerInternals = this;\n\n    //################## INICIALIZACIONES ##########################\n    //Inicialización de las variables de temperatura\n    this.sandboxFlowContext.set(\"flowdev1temperatura1\", 10);\n    \n    coreServer.internalDebugLog(\"Setup dinamic del espai de adreces\");\n    \n    const rootFolder = addressSpace.findNode(\"RootFolder\");\n    \n    node.warn('Construccio del nou espai de adreces per a OPC UA');\n\n    const ProjecteFI = namespace.addFolder(rootFolder.objects, { \"browseName\": \"ProjecteFI\" });\n\n    //Declaración del espacio de direcciones\n    //espacio de direcciones Temperaturas\n    \n    const device1 = namespace.addObject({\n        organizedBy: ProjecteFI,\n        browseName: \"PANEL_PRODUCCIO\",\n    });\n    \n    const device2 = namespace.addObject({\n        organizedBy: ProjecteFI,\n        browseName: \"PANEL_QUALITAT\",\n    });\n    \n    const device3 = namespace.addObject({\n        organizedBy: ProjecteFI,\n        browseName: \"PANEL_MANTENIMENT\",\n    });\n    \n    namespace.addVariable({\n        dataType: 'Int16',\n        componentOf: device1,\n        browseName: 'Temperatura1',\n        nodeId: 's=PANEL_PRODUCCIO.Temperatura1',\n        value: {\n\t\t    get: function () {\n\t\t\t    return new opcua.Variant({\n\t\t\t        dataType: opcua.DataType.Int16,\n\t\t\t        value: flexServerInternals.sandboxFlowContext.get(\"flowdev1temperatura1\") });\n\t\t    },\n\t\t    set: function (variant) {\n                flexServerInternals.sandboxFlowContext.set(\n                    \"flowdev1temperatura1\",\n                    parseFloat(variant.value)\n                );\n                return opcua.StatusCodes.Good;\n            }\n\t    }\n    });\n    \n    \n    coreServer.internalDebugLog(\"Espai de adreces creat\");\n    node.warn(\"Contruccio del nou espai de adreces fet\");\n\n    done();\n}\n",
+        "x": 170,
+        "y": 40,
         "wires": [
             []
         ]
